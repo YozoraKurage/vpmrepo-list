@@ -1,7 +1,7 @@
 {
-    "name":"test-YozoLab-VPMRepository listing",
+    "name":"YozoLab-VPMRepository listing",
     "id":"net.yozolab.vpmrepository-listing",
-    "url":"https://yozorakurage.github.io/test-vpmrepo-list/index.json",
+    "url":"https://yozorakurage.github.io/vpmrepo-list/index.json",
     "author":{
         "email":"yozorakurage@yozolab.net",
         "name":"YozoraKurage",
@@ -9,7 +9,7 @@
     },
     "description":"Example listing of VRChat packages",
     "infoLink":{
-        "url":"https://github.com/YozoraKurage/test-vpmrepo-list",
+        "url":"https://github.com/YozoraKurage/vpmrepo-list",
         "text":"View on GitHub"
     },
     "bannerUrl":"banner.png",
