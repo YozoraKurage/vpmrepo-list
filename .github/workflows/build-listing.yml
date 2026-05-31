@@ -1,7 +1,9 @@
 name: Build Repo Listing
 
-on: 
+on:
   workflow_dispatch:
+  repository_dispatch:
+    types: [daerd-release]
   push:
     branches: main
     paths: source.json
