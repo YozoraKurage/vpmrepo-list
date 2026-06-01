@@ -3,7 +3,7 @@ name: Build Repo Listing
 on:
   workflow_dispatch:
   repository_dispatch:
-    types: [daerd-release]
+    types: [daerd-release, yozolab-utils-release]
   push:
     branches: main
     paths: source.json

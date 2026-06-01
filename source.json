@@ -14,16 +14,9 @@
     },
     "bannerUrl":"banner.png",
     "githubRepos":[
-        "YozoraKurage/DaerD"
+        "YozoraKurage/DaerD",
+        "YozoraKurage/YozoLab-Utils"
     ],
     "packages":[
-        {
-            "name":"net.yozolab.YozoLab-VPMRepos",
-            "releases":[
-                "https://github.com/YozoraKurage/YozoLab-VPMRepos/releases/download/0.0.1/net.yozolab.sceneutils-0.0.1.zip",
-                "https://github.com/YozoraKurage/YozoLab-VPMRepos/releases/download/0.0.2/net.yozolab.sceneutils-0.0.2.zip",
-                "https://github.com/YozoraKurage/YozoLab-VPMRepos/releases/download/0.0.3/net.yozolab.sceneutils-0.0.3.zip"
-            ]
-        }
     ]
 }
