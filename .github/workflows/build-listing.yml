@@ -3,7 +3,11 @@ name: Build Repo Listing
 on:
   workflow_dispatch:
   repository_dispatch:
-    types: [daerd-release, yozolab-utils-release]
+    # vpm-package-release: 全パッケージリポジトリ共通の汎用イベント種別。
+    #   新しいパッケージを source.json に足してもここは編集不要。
+    # daerd-release / yozolab-utils-release: 旧・リポジトリ固有の種別（後方互換）。
+    #   各リポジトリが vpm-package-release に移行し終えたら削除してよい。
+    types: [vpm-package-release, daerd-release, yozolab-utils-release]
   push:
     branches: main
     paths: source.json
