@@ -15,7 +15,8 @@
     "bannerUrl":"banner.png",
     "githubRepos":[
         "YozoraKurage/DaerD",
-        "YozoraKurage/YozoLab-Utils"
+        "YozoraKurage/YozoLab-Utils",
+        "YozoraKurage/Tabstep"
     ],
     "packages":[
     ]
