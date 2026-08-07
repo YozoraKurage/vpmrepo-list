@@ -43,7 +43,15 @@ jobs:
           repository: vrchat-community/package-list-action
           path: ${{env.pathToCi}}
           clean: false # otherwise the local repo will no longer be checked out
-          
+
+      # package-list-action の build.sh は `dotnet --list-sdks | grep ^8` で 8系SDKの有無を見て
+      # net8.0/net6.0 を選ぶ。ランナーが .NET 10 SDK 同梱に更新され 8系SDKが無くなったため
+      # net6.0 にフォールバックし、6.0 ランタイム未導入で起動失敗していた。8.0 SDK を明示導入して net8.0 を選ばせる。
+      - name: Setup .NET 8 SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
       - name: Restore Cache
         uses: actions/cache@v4
         with:
