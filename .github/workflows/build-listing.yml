@@ -47,10 +47,14 @@ jobs:
       # package-list-action の build.sh は `dotnet --list-sdks | grep ^8` で 8系SDKの有無を見て
       # net8.0/net6.0 を選ぶ。ランナーが .NET 10 SDK 同梱に更新され 8系SDKが無くなったため
       # net6.0 にフォールバックし、6.0 ランタイム未導入で起動失敗していた。8.0 SDK を明示導入して net8.0 を選ばせる。
-      - name: Setup .NET 8 SDK
+      # 一覧を作る PackageBuilder（ci/PackageBuilder）は net6.0 向けで、ビルドしたあと .NET 6 の実行環境で起動する。
+      # ランナーから .NET 6 が外れて起動に失敗した（2026-10-06）ので、6.0 も入れる。
+      - name: Setup .NET 8 SDK and .NET 6
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '8.0.x'
+          dotnet-version: |
+            6.0.x
+            8.0.x
 
       - name: Restore Cache
         uses: actions/cache@v4
